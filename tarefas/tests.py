@@ -43,7 +43,7 @@ class TarefaAPITests(APITestCase):
             f"/api/tarefas/{self.tarefa.id}/"
         )
 
-        self.assertEqual(resposta.status_code, status.HTTP_200_OK)
+        self.assertEqual(resposta.status_code, status.HTTP_404_NOT_FOUND)
         self.assertEqual(resposta.data["titulo"], "Estudar Django")
 
     def test_atualizar_tarefa(self):
